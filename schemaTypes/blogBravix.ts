@@ -55,17 +55,24 @@ export const blogBravix = defineType({
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
-      name: 'categories',
-      title: 'Blog Categories',
+      name: 'category',
+      title: 'Blog Category',
+      type: 'reference',
+      to: [{type: 'category'}],
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'tags',
+      title: 'Blog tags',
       type: 'array',
       of: [
         defineArrayMember({
           type: 'reference',
-          to: [{type: 'category'}],
+          to: [{type: 'tags'}],
         }),
       ],
       validation: (Rule) =>
-        Rule.required().min(1).max(2).error('You can select between 1 and 2 categories.'),
+        Rule.required().min(2).max(4).error('You can select between 1 and 4 tags.'),
     }),
     defineField({
       name: 'publishedAt',
@@ -88,6 +95,14 @@ export const blogBravix = defineType({
       title: 'Latest Blog',
       type: 'boolean',
       description: 'Toggle to Latest on or off',
+      initialValue: true,
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'featured',
+      title: 'Featured Blog',
+      type: 'boolean',
+      description: 'Toggle to Featured on or off',
       initialValue: true,
       validation: (Rule) => Rule.required(),
     }),

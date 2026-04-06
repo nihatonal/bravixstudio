@@ -99,6 +99,7 @@ export const blogType = defineType({
       initialValue: true,
       validation: (Rule) => Rule.required(),
     }),
+
     defineField({
       name: 'readingTime',
       title: 'Reading Time (minutes)',

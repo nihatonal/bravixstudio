@@ -6,6 +6,7 @@ import {blogDestinationType} from './blogDestinationType'
 import {blogType} from './blogType'
 import {categoryBravix} from './categoryBravix'
 import {recommendedType} from './recommendedType'
+import { tagsBravix } from './tagsBravix'
 export const schemaTypes = [
   blogCategoryType,
   blogDestinationType,
@@ -15,4 +16,5 @@ export const schemaTypes = [
   blogBravix,
   authorBravix,
   categoryBravix,
+  tagsBravix
 ]
