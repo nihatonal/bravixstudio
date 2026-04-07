@@ -8,6 +8,13 @@ export const blogBravix = defineType({
   icon: DocumentTextIcon,
   fields: [
     defineField({
+      name: 'translationGroup',
+      title: 'Translation Group',
+      type: 'string',
+      description: 'Same value for all language versions of the same blog post',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'title',
       type: 'string',
       validation: (Rule) => Rule.required(),
