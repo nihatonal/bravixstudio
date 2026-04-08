@@ -39,6 +39,16 @@ export const blockContentType = defineType({
       },
     }),
 
+    // ✅ EKLEDİĞİMİZ KISIM
+    defineArrayMember({
+      type: "code",
+      title: "Code Block",
+      options: {
+        language: "javascript",
+        withFilename: false,
+      },
+    }),
+
     defineArrayMember({
       type: "image",
       icon: ImageIcon,

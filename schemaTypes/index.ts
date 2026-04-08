@@ -5,9 +5,9 @@ import {blogCategoryType} from './blogCategoryType'
 import {blogDestinationType} from './blogDestinationType'
 import {blogType} from './blogType'
 import {categoryBravix} from './categoryBravix'
-import { codeBlockType } from './codeBlock'
+import {codeBlockType} from './codeBlock'
 import {recommendedType} from './recommendedType'
-import { tagsBravix } from './tagsBravix'
+import {tagsBravix} from './tagsBravix'
 export const schemaTypes = [
   blogCategoryType,
   blogDestinationType,
@@ -18,5 +18,5 @@ export const schemaTypes = [
   authorBravix,
   categoryBravix,
   tagsBravix,
-  codeBlockType
+  codeBlockType,
 ]
