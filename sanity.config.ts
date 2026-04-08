@@ -2,7 +2,6 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
-import {codeInput} from '@sanity/code-input'
 export default defineConfig({
   name: 'default',
   title: 'sitava-travel',
@@ -10,7 +9,7 @@ export default defineConfig({
   projectId: '60hm63ft',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool(),codeInput(),],
+  plugins: [structureTool(), visionTool(),],
 
   schema: {
     types: schemaTypes,

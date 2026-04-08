@@ -27,25 +27,15 @@ export const blockContentType = defineType({
             title: 'URL',
             name: 'link',
             type: 'object',
-            fields: [
-              {
-                title: 'URL',
-                name: 'href',
-                type: 'url',
-              },
-            ],
+            fields: [{title: 'URL', name: 'href', type: 'url'}],
           },
         ],
       },
     }),
 
     defineArrayMember({
-      type: 'code',
+      type: 'codeBlock',
       title: 'Code Block',
-      options: {
-        language: 'javascript',
-        withFilename: false,
-      },
     }),
 
     defineArrayMember({
