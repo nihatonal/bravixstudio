@@ -144,20 +144,17 @@ export const blogBravix = defineType({
     select: {
       title: 'title',
       media: 'image',
-      category0: 'categories.0.title',
-      category1: 'categories.1.title',
+      category: 'categories.title',
       readingTime: 'readingTime',
       views: 'views',
     },
     prepare(selection) {
-      const {title, media, category0, category1, views} = selection
-
-      const categoryList = [category0, category1].filter(Boolean).join(', ') || 'No category'
+      const {title, media, category, views} = selection
 
       return {
         title,
         media,
-        subtitle: `${categoryList} • ${views ?? 0} views`,
+        subtitle: `${category} • ${views ?? 0} views`,
       }
     },
   },
