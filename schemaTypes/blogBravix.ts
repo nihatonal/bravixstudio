@@ -144,7 +144,7 @@ export const blogBravix = defineType({
     select: {
       title: 'title',
       media: 'image',
-      category: 'categories.title',
+      category: 'category.title',
       readingTime: 'readingTime',
       views: 'views',
     },
