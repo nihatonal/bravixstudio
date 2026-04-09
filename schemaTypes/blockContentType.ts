@@ -41,7 +41,7 @@ export const blockContentType = defineType({
 
     // ✅ EKLEDİĞİMİZ KISIM
     defineArrayMember({
-      type: "code",
+      type: "codeBlock",
       title: "Code Block",
       options: {
         language: "javascript",
